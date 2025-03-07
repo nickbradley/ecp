@@ -15,5 +15,8 @@
   },
   "scripts": {
     "test": "mocha -r ts-node/register activity/**/*.test.ts"
+  },
+  "dependencies": {
+    "all": "^0.0.0"
   }
 }

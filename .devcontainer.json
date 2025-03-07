@@ -1,8 +1,8 @@
 {
     "name": "Node.js",
-    "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:0-23",
+    "image": "mcr.microsoft.com/devcontainers/typescript-node:1.1.4-22-bullseye",
     "features": {
         "ghcr.io/devcontainers-contrib/features/jshint:2": {}
     },
-    "postCreateCommand": "yarn install",
+    "postCreateCommand": "yarn install"
 }
