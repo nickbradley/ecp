@@ -1,0 +1,19 @@
+{
+  "name": "ECP",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@tsconfig/node23": "^23.0.0",
+    "@types/chai": "4.3.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.13.9",
+    "chai": "4.3.4",
+    "mocha": "^11.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.2"
+  },
+  "scripts": {
+    "test": "mocha -r ts-node/register activity/**/*.test.ts"
+  }
+}
