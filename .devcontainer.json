@@ -1,0 +1,8 @@
+{
+    "name": "Node.js",
+    "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:0-23",
+    "features": {
+        "ghcr.io/devcontainers-contrib/features/jshint:2": {}
+    },
+    "postCreateCommand": "yarn install",
+}
