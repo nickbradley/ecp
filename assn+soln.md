@@ -43,25 +43,25 @@ assert(isValidEmail("bob@1-11.org"), false)
 
 A. [8 marks] **Test suite completeness.** What test cases are missing from the test suite, if any? 
 > The test suite is missing _at least_ the following cases:
-  1. empty local
-  2. long (13+ chars) local
-  3. consecutive dots in local
-  4. only dot local (e.g. ".@example.org") 
-  5. uppercase letter in domain 
-  6. all-numeric domain
-  7. domain ending with .edu
-  8. domain starting with hyhpen
+>  1. empty local
+>  2. long (13+ chars) local
+>  3. consecutive dots in local
+>  4. only dot local (e.g. ".@example.org") 
+>  5. uppercase letter in domain 
+>  6. all-numeric domain
+>  7. domain ending with .edu
+>  8. domain starting with hyhpen
 
 B. [4 marks] **Test suite correctness.** What test cases assert an incorrect result, if any?
 > The following tests are incorrect:
-```ts
-assert(isValidEmail("0@fake.org"), false) // this is valid (one digit local-part OK)
-assert(isValidEmail("hello@me.com"), true) // domain too short
-assert(isValidEmail("J.smith@a-a.org"), false) // this is valid (middle hyphen OK)
-assert(isValidEmail("r.r.martin@tol.org"), false) // this is valid (two dots OK)
-assert(isValidEmail("joe@live.ca"), true)  // .ca is not accepted
-assert(isValidEmail("bob@1-11.org"), false) // all-numeric with a hyphen is OK
-```
+> ```ts
+> assert(isValidEmail("0@fake.org"), false) // this is valid (one digit local-part OK)
+> assert(isValidEmail("hello@me.com"), true) // domain too short
+> assert(isValidEmail("J.smith@a-a.org"), false) // this is valid (middle hyphen OK)
+> assert(isValidEmail("r.r.martin@tol.org"), false) // this is valid (two dots OK)
+> assert(isValidEmail("joe@live.ca"), true)  // .ca is not accepted
+> assert(isValidEmail("bob@1-11.org"), false) // all-numeric with a hyphen is OK
+> ```
 
 C. [1 mark] Assuming this test fails `assert(isValidEmail("tweleve.long@name.com"), false)`, what is likely the cause?
 > Given that the length of the local-part of the email is on the boundary of the allowed length, it is likely that the check in the implementation of `isValidEmail` uses `<` instead of `<=` (an off-by-one error).
