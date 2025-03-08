@@ -2,10 +2,12 @@
 0 marks if student agrees and only provides justification to support agreement.
 
 +1 if the student clearly states that they do NOT agree: this is a yes or no response.
+
 +2 for each of the following justifications being present in the students response:
   - test suite confirms that the implementation adheres to the specification
   - test suite provides protection from regressions when changing the system
   - systematically translating the specification into test cases could help identify missing or incomplete behaviours
+
 +1 if the solution mentions risk mitigation but doesn't eloborate on what risk and how the test suite help mitigate the risk
 
 ## Q2.A (out of 8 marks)
